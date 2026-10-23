@@ -1,0 +1,16 @@
+{
+  "name": "pokernow-algo-bot",
+  "version": "0.8.0",
+  "description": "Local PokerNow No Limit Hold'em analysis and browser automation",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/gcof/PokerNowAlgoBot.git" },
+  "bugs": { "url": "https://github.com/gcof/PokerNowAlgoBot/issues" },
+  "engines": { "node": ">=24.0.0" },
+  "private": true,
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/*.test.js",
+    "check": "node scripts/check.js",
+    "build": "node scripts/build.js",
+    "benchmark": "node tests/benchmark.js"
+  }
+}
