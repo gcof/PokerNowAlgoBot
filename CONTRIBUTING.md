@@ -13,7 +13,7 @@ Add representative synthetic regressions for bug fixes. Do not commit private ta
 3. Run checks/tests/builds; inspect ZIP entries and `SHA256SUMS`.
 4. Smoke-test unpacked installation on a permitted test table: preview, Start/Stop/Esc, custom sizing, duplicate-tab prevention and transfers.
 5. Commit reviewed changes, create annotated `vX.Y.Z`, and push branch/tag when authorized.
-6. The tag workflow creates a draft release. Inspect assets/notes/checksums before publishing.
+6. The tag workflow publishes the release after checks/tests pass. Review the local assets/notes/checksums before pushing a version tag; verify the resulting release afterward.
 
 ```sh
 git tag -a vX.Y.Z -m "PokerNow Algo Bot vX.Y.Z"

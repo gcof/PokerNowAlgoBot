@@ -1,4 +1,4 @@
-name: Draft release
+name: Release
 on:
   push:
     tags: ['v*']
@@ -8,8 +8,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 24
           package-manager-cache: false
@@ -18,7 +18,7 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build
-      - name: Create draft with installable ZIP and checksum
+      - name: Publish installable ZIP and checksum
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/*.zip dist/SHA256SUMS --verify-tag --draft --title "PokerNow Algo Bot $GITHUB_REF_NAME" --notes-file docs/RELEASE_NOTES.md
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip dist/SHA256SUMS --verify-tag --latest --title "PokerNow Algo Bot $GITHUB_REF_NAME" --notes-file docs/RELEASE_NOTES.md

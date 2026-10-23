@@ -90,6 +90,6 @@ Tests exercise representative decisions, weighted sampling, synchronization, can
 
 `node scripts/build.js` produces the installable ZIP and `SHA256SUMS` in `dist/`. An explicit runtime allowlist excludes personal artifacts. Fixed ZIP timestamps give byte-identical repeated builds for a given source and Node/zlib runtime.
 
-Version tags `vX.Y.Z` must match both package and manifest versions. Pushing a tag runs checks/tests/builds and creates a **draft GitHub release** with the ZIP/checksum. A maintainer reviews and publishes it. The `0.x` series is experimental.
+Version tags `vX.Y.Z` must match both package and manifest versions. Pushing a tag runs checks/tests/builds and publishes a **GitHub release** with the ZIP/checksum after all checks pass. Review the source and local build before pushing a version tag. The `0.x` series is experimental.
 
 Independent project, unaffiliated with PokerNow. [MIT](LICENSE). Background: [positional openings](https://www.pokerstars.com/poker/learn/lesson/opening-the-pot/) and [equity realization](https://blog.gtowizard.com/equity-realization/); implementation weights are original approximations.

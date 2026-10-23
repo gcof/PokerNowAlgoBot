@@ -9,4 +9,4 @@ Portable Manifest V3 release for PokerNow NLH without embedded account/table con
 
 Extract `pokernow-algo-bot-v0.8.0.zip` and load its folder containing `manifest.json` as an unpacked Chrome/Edge extension. Refresh a permitted test table. Prototype settings are not migrated; start in preview and select your settings again.
 
-Heuristic strategy: ICM, full historical side pots and multiple boards remain unsupported. Automated tests and archive inspection are not a browser compatibility or win-rate benchmark. Perform the CONTRIBUTING.md smoke test before publishing this draft.
+Heuristic strategy: ICM, full historical side pots and multiple boards remain unsupported. Automated tests and archive inspection are not a browser compatibility or win-rate benchmark. The browser smoke-test checklist is documented in CONTRIBUTING.md; live compatibility testing of this build remains pending.
